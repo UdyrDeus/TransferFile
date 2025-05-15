@@ -1,1 +1,80 @@
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Succès - WeTransfer Rust</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Spécifique success page */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      color: #fff;
+      overflow: hidden;
+    }
+    .success-box {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 3rem 4rem;
+      border-radius: 14px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.25);
+      text-align: center;
+      animation: slideDownFade 0.7s ease forwards;
+      max-width: 400px;
+      width: 90%;
+    }
+    @keyframes slideDownFade {
+      0% {
+        opacity: 0;
+        transform: translateY(-40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      font-weight: 900;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+    a.button {
+      text-decoration: none;
+      background: #4a90e2;
+      color: white;
+      padding: 0.85rem 2.2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 6px 15px rgba(74,144,226,0.6);
+      transition: background 0.3s ease, transform 0.15s ease;
+      display: inline-block;
+      user-select: none;
+    }
+    a.button:hover {
+      background: #357abd;
+      transform: translateY(-2px);
+    }
+    a.button:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="success-box">
+    <h1>Succès !</h1>
+    <p>Votre fichier a bien été envoyé.</p>
+    <a href="index.html" class="button">Envoyer un autre fichier</a>
+  </div>
+</body>
+</html>
