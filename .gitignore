@@ -1,0 +1,12 @@
+/uploads/*
+!/.gitignore
+# Cible de compilation Rust
+/target/
+
+# Fichiers de dépendances
+Cargo.lock
+
+# Fichiers spécifiques à l'OS
+.DS_Store
+Thumbs.db
+
