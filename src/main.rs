@@ -4,11 +4,11 @@ use actix_web::{error, web, App, Error, HttpResponse, HttpServer};
 use futures_util::stream::StreamExt as _;
 use std::fs;
 use std::io::Write;
-use uuid::Uuid;  // Assurez-vous d'importer `Uuid`
+use uuid::Uuid; 
 
-use lettre::message::Message; // Suppression de Mailbox inutilisé
+use lettre::message::Message; 
 use lettre::transport::smtp::authentication::Credentials;
-use lettre::{SmtpTransport, Transport}; // Suppression de `Tokio1Executor` ici
+use lettre::{SmtpTransport, Transport}; 
 
 // Structure pour recevoir les données de la requête
 #[derive(serde::Deserialize)]
@@ -32,8 +32,8 @@ async fn upload(
     while let Some(item) = payload.next().await {
         let mut field = item?;
 
-        // Utilisation de `Uuid::new_v4()` pour générer un UUID v4
-        let filename = format!("upload-{}", Uuid::new_v4().to_string());  // Correction ici
+        
+        let filename = format!("upload-{}", Uuid::new_v4().to_string()); 
         let filepath = format!("{}/{}", upload_path, filename);
 
         let mut f = fs::File::create(&filepath)?; // Crée le fichier
