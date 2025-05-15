@@ -1,0 +1,14 @@
+[package]
+name = "TransferFile"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4.0"
+actix-files = "0.6"
+actix-multipart = "0.7.2"
+lettre = "0.11.16"
+uuid = { version = "1.16.0", features = ["v4"] }  # Activation de v4 pour UUID
+futures-util = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
